@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Physical Computing Syllabus </title>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom styles for this template -->
+    <link href="mycss/starter-template.css" rel="stylesheet">
+    
+    <!-- <link href="mycss/grid.css" rel="stylesheet"> -->
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/p5.min.js" type="text/javascript"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/addons/p5.dom.min.js" type="text/javascript"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/addons/p5.sound.min.js" type="text/javascript"></script>
+
+<!-- 
+ 
+    <script src = "libraries/p5.js" type="text/javascript"></script>
+    <script src = "libraries/p5.dom.js" type="text/javascript"></script>
+    <script src = "libraries/p5.sound.js" type="text/javascript"></script>
+
+-->
+
+    <script src="js/sketch.js" type="text/javascript"></script>
+    <link href="mycss/mycss.css" rel="stylesheet">
+    <style> body {padding: 50px; margin: 0;} canvas {vertical-align: top;} </style>
+
+    </head>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////-->
+<!--HEADER AND NAVIGATION-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <body>
+        <nav class="nav navbar navbar-default navbar-fixed-top" id="myTabs">
+            <div class="navbar-brand">
+                <strong>Medium Workshop: Physical Computing </strong>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="#schedule"> Syllabus</a></li>
+                <li><a href="#labs">Labs</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#students">Student Blogs</a></li>
+                <li><a href="#course">Overview</a></li>
+                
+                
+            </ul>
+
+        </nav>
+            
+      
+ <!-- CONTENT -->       
+
+
+    <div class="container" id="schedule" style = "cursor:pointer" onclick="toggleDiv(this)">
+        <span id="schedule" class="anchor"></span>
+        <div class="page-header">
+            <h2 class="noselect">Syllabus</h2>
+        </div>
+        <div class="container-fluid" id="schedule-detailed">
+            <div class="container">
+                <h3>Week 1: </h3>
+                <h4>Tuesday August 30th</h4>
+                    <ul>
+                    <strong>In Class: </strong> Introductions, Review Syllabus, Review Course, Electricity Overview. 
+                    </ul>
+                    <ul><strong>For Next week: </strong>
+                        <ul><a href="#labs">Lab 1: First Circuit</a></ul>
+                        <ul><a href="#materials">Materials to purchase</a></ul>
+                        <ul><a href="https://docs.google.com/spreadsheets/d/12mrECZfoBHJ3xtFwX8FP-wUp6A-MVsR1_DIhRrMfv00/edit?usp=sharing">Fill out your info on this google doc please</a></ul> 
+                    </ul>
+
+                <h3>Week 2:</h3>
+                    <h4>Tuesday Sept 6th</h4>
+                    <ul>
+                    <strong>In Class: </strong> Digital I/O, Circuit notation
+                    </ul>
+                        <ul><strong>For Next week: </strong>
+                            <ul><a href="#labs">Lab 2: Input Output </a></ul>
+                            <ul><a href="#materials">Materials to purchase</a></ul>
+                            <ul><a href="#">Fill out your info on this google doc please</a></ul> 
+                        </ul>
+
+                <h3>Week 3:</h3>
+                    <h4>Tuesday Sept 13th</h4>
+                    <ul>
+                        <strong>In Class: </strong> Variables + Analog Input and Sensing +PWM Analog Output
+                    </ul>
+                    <ul><strong>For Next week: </strong><a href="#labs">Lab 3: On Off and In Between</a></ul>
+
+                <h3>Week 4:</h3>
+                    <h4>Tuesday Sept 20th</h4>
+                    <ul>
+                        <strong>In Class: </strong> Motors 
+                        <ul><strong>For Next week: Lab 4</strong><a href="#labs">Lab 4: Motion</a></ul>
+                        <ul><strong>Midterm Proposal:</strong>Review the<a href="#midterm"> Midterm Prompt</a> and create a short proposal for your intendend project</ul>
+                    </ul>
+
+                <h3>Week 5:</h3>
+                <h4>Tuesday Sept 27th</h4>
+                <ul>
+                    <strong>In Class: </strong> Drawing / Animation (Variables and Operators)
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 5: Computer Drawing</a></p>
+                </ul>
+
+                <h3>Week 6:</h3>
+                <h4> <span style="color:red;">Friday </span>Oct 14th</h4>
+                <ul>
+                    <strong>In Class: </strong> For Loops and Functions
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 6: Functionality</a></p>
+                </ul>
+
+                <h3>Week 7:</h3>
+                <h4>Tuesday Oct 18th</h4>
+                <ul>
+                    <strong>In Class: </strong> MIDTERM DUE  Arrays and Objects
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 7: Objects and Arrays</a></p>
+                </ul>
+
+                <h3>Week 8:</h3>
+                <h4>Tuesday Oct 25th</h4>
+                <ul>
+                    <strong>In Class: </strong> Telecommunication
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 8: Bits and Bytes</a></p>
+                </ul>
+
+                <h3>Week 9:</h3>
+                <h4>Tuesday Nov 1st</h4>
+                <ul>
+                    <strong>In Class: </strong> Pixels
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 9: PIXELS</a></p>
+                </ul>
+
+                <h3>Week 10:</h3>
+                <h4>Tuesday Nov 8th</h4>
+                <ul>
+                    <strong>In Class: </strong> Sound
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 10</a></p>
+                </ul>
+
+                <h3>Week 11:</h3>
+                <h4>Tuesday Nov 15th</h4>
+                <ul>
+                    <strong>In Class: </strong> Final Proposal, Readymades
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 11</a></p>
+                </ul>
+
+                <h3>Week 12:</h3>
+                <h4>Tuesday Nov 22nd</h4>
+                <ul>
+                    <strong>In Class: </strong> Data / JSON 
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 12</a></p>
+                </ul>
+
+                <h3>Week 13:</h3>
+                <h4>Tuesday Nov 29th</h4>
+                <ul>
+                    <strong>In Class: </strong> HTML / CSS / DOM
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 13</a></p>
+                </ul>
+
+                <h3>Week 14:</h3>
+                <h4>Tuesday Dec 6th</h4>
+                <ul>
+                    <strong>In Class: </strong> Work Day / Progress Check-in
+                    <p><strong>For Next week: </strong><a href="#labs">Lab 2</a></p>
+                </ul>
+
+                <h3>Week 15:</h3>
+                <h4>Tuesday Dec 13th</h4>
+                <ul>
+                    <strong>In Class: </strong> Final Presentations                   
+                </ul>
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- LABS & ASSIGNMENTS  LABS & ASSIGNMENTS  LABS & ASSIGNMENTS  LABS & ASSIGNMENTS  LABS & ASSIGNMENTS -->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <div class="container" id="labs" style = "cursor:pointer" onclick="toggleDiv(this)">
+        <span id="schedule" class="anchor"></span>
+        <div class="page-header">
+            <h2 class="noselect">Labs</h2>
+        </div>
+        <div class="container-fluid" id="labs-detailed">
+            <div class="container" id="lab1">
+                <h3>Lab 1: First Circuit, Switch, and Hello World </h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Create your own circuit and a switch that is activated and deactivated by something other than your hands</li>  
+                        <li><a href="https://docs.google.com/spreadsheets/d/12mrECZfoBHJ3xtFwX8FP-wUp6A-MVsR1_DIhRrMfv00/edit?usp=sharing" target="BLANK">Set up a blog and send me the link here</a></li>
+                        <li><strong>BLOG POST :  </strong>Use photo video to document your circuit. Include a write up of your process and address the following issues: What does the switch do? Where could it reside? Who will use it? How did you make it?</li>
+                        <li><a href="http://arduino.cc/en/Guide/HomePage"> Install the Arduinio IDE: </a>Run the <a href="http://arduino.cc/en/tutorial/blink">"blink"</a> example to make sure its installed correctly. (use the built in LED)</li>
+                    </ul>
+
+                <li><strong>Resources:</strong></li>
+                    <ul>
+                        <li><a href="http://mars1980.github.io/resources/physComp.pdf">Physical Computing: Introduction, Ch1, Ch2, Ch3</a></li>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Components"> ITP Lab: </a>Components</li>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Breadboard"> ITP Lab: </a>Setting up a breadboard</li>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Electronics"> ITP Lab: </a>Using a multimeter (use Arduino to power the board, ignore the Voltage regulator)</li>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Soldering"> ITP Lab: </a>Soldering</li>
+                    </ul>
+
+                <li><strong>Optional Readings:</strong></li>
+                    <ul>
+                        <li><a href="http://playground.arduino.cc/uploads/Main/arduino_comic_v0004.pdf">Jody Culkin's sweet Arduino Comic</a></li>
+                        <li><a href="http://mars1980.github.io/resources/theartofinteractivedesign.pdf">Chris Crawford: The Art of Interactive Design Ch 1 & 2</a></li>
+                    </ul>
+
+            </div>
+
+            <div class="container" id="lab2">
+                <h3>Lab 2: Input/Output </h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Create another circuit or modify your existing circuit </li>    
+                        <li><a href="https://docs.google.com/spreadsheets/d/12mrECZfoBHJ3xtFwX8FP-wUp6A-MVsR1_DIhRrMfv00/edit?usp=sharing" target="BLANK">Set up a blog and send me the link here</a></li>
+                        <li><strong>BLOG POST :  </strong>Use photo video to document your circuit. Include a write up of your process and address the following issues: What does the switch do? Where could it reside? Who will use it? How did you make it?</li>
+                    </ul>
+
+                <li><strong>Lab Report:</strong></li>
+                    <ul>
+                        <li>From the readings and the ITP Labs, write a couple of paragraphs on what is new to you and what you already knew. Feel free to include any pictures of successes, failures, or questions. Conclude with a short paragraph about what you'd like to learn throughout the course of the semester, both technically and conceptually.</li>
+                    </ul>
+                
+
+                <li><strong>Resources:</strong></li>
+                    <ul>
+                        <li><a href="https://itp.nyu.edu/physcomp/lessons/microcontrollers/digital-input-output/">ITP Lab: Digital Input Output</a></li>
+                        <li><a href="https://itp.nyu.edu/physcomp/lessons/microcontrollers/microcontrollers-the-basics/"> ITP Lab: </a>Microcontrollers</li>
+                        <li>VIDEO: <a href="https://vimeo.com/86548673">Digital Input</a></li>
+                        <li>VIDEO: <a href="https://vimeo.com/86534049">Digital Output</a></li>
+                    </ul>
+
+                <li><strong>Optional Readings:</strong></li>
+                    <ul>
+                        <li><a href="http://www.jnd.org/dn.mss/emotion_design_at.html">Essay: Emotion & Design</a></li>
+                        <li><a href="http://mars1980.github.io/resources/arduinoCookbook2ndEd.pdf">Arduino Cookbook Ch2, Ch3, Ch 5.1 - 5.5</a></li>
+                        <li><a href="http://www.tigoe.net/blog/category/physicalcomputing/176/">Physical Computing's Greatest Hits & Misses</a></li>
+                        <li><a href="http://www.moma.org/interactives/exhibitions/2011/talktome/essay/">Essay: Talk to Me</a></li>
+                        <li><a href="http://worrydream.com/ABriefRantOnTheFutureOfInteractionDesign/" target="blank">Bret Victor: Rant on the Future of Interaction Design</a></li>
+                    </ul>
+
+            </div>
+
+             <div class="container" id="lab3">
+                <h3>Lab 3: On Off and In Between </h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Create circuit that makes use of Analog inputs and outputs.  You may now use your hands (if you must...) to trigger interactions. If you choose to use hands then you can not use a potentiometer</li>    
+                        <li><strong>BLOG POST :  </strong>Document your work</li>
+                    </ul>
+                
+
+                <li><strong>References:</strong></li>
+                    <ul>
+                        
+                    </ul>
+
+            </div>
+
+             <div class="container" id="lab4">
+                <h3>Lab 4: Motion</h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Expand on what we did in class. Make something move.  It must react to an input. All body parts and interactions are now in play</li>    
+                        <li><strong>BLOG POST :  </strong>Document your work</li>
+                        <li><strong>Watch:</strong>P5 drawing videos</li>
+                        <li>Download p5 and try to draw something. Make art. Make a selfie. Explore the documentation Come to class with questions</li>
+
+                    </ul>
+
+                <li><strong>Readings:</strong></li>
+                    <ul>
+                        <li>Blog your assignment.</li>
+                    </ul>
+                
+
+                <li><strong>References:</strong></li>
+                    <ul>
+                        
+                    </ul>
+
+            </div>
+
+            <div class="container" id="lab5">
+                <h3>Lab 5: Animation</h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Use p5 to make a game or a simulation a narrative with </li>    
+                        <li><strong>BLOG POST :  </strong>upload sketch and code to your blog.</li>
+                    </ul>
+
+                <li><strong>Lab Report:</strong></li>
+                    <ul>
+                        <li>Blog your assignment.</li>
+                    </ul>
+                
+
+                <li><strong>References:</strong></li>
+                    <ul>
+                    </ul>
+
+            </div>
+
+             <div class="container" id="lab6">
+                <h3>Lab 6: </h3>
+                
+                <li><strong>Doings: Functionality</strong></li>
+                    <ul>
+                        <li>Build on your animation (or start a new one) but make sure your draw loop only consists of calls to functions</li>    
+                        <li><strong>BLOG POST :  </strong>Uupload sketch and code to your blog or include a link</li>
+                    </ul>
+
+                <li><strong>Lab Report:</strong></li>
+                    <ul>
+                        <li>Blog your assignment.</li>
+                    </ul>
+                
+
+                <li><strong>References:</strong></li>
+                    <ul>
+                       
+                    </ul>
+
+            </div>
+
+
+
+
+
+
+    
+        </div>
+    </div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- RESOURCES  RESOURCES  RESOURCES  RESOURCES  RESOURCES  RESOURCES  RESOURCES  RESOURCES  -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="container" id="resources" style = "cursor:pointer" onclick="toggleDiv(this)">
+        <span id="schedule" class="anchor"></span>
+            <div class="page-header">
+                <h2 class="noselect">Resources</h2>
+            </div>
+        <div class="container-fluid" id="resources-detailed">
+            <ul>
+                <li><strong>Basic Analog Circuits:</strong></li>
+                <li><a href="http://kinasmith.com/how-to-build-a-quad-gated-oscillator-nand-synthesizer">How to build a breadboard synthesizer</a></li>
+                <li><a href="http://www.nicolascollins.com/hackingtutorial12.htm">Tutorial: From Bread board to Perf board</a></li>
+                <li><a href="http://www.basicanalogcircuits.com">Eric Rosenthal's Basic Analog Circuits Class</a></li>
+                <li><a href="https://www.udemy.com/arduino-sbs/?siteID=3rziCtUCdbo-oK7kQHVmBU_5Zhb6FfEDpw&LSNPUBID=3rziCtUCdbo">Full Arduino Course on Udemy</a></li>
+            
+            </ul>
+    
+
+            <ul>
+                <li><strong>Physical Computing:</strong></li>
+                <li><a href="http://vimeo.com/channels/pcomp">ITP's Physical Computing Vimeo Channel</a> </li>
+                <li><a href="https://itp.nyu.edu/physcomp/Tutorials/Tutorials">ITP Pcomp tutorials</a></li>
+                <li><a href="https://learn.adafruit.com">Adafruit</a></li>
+                <li><a href="http://www.instructables.com">Instructables</a></li>
+                <li><a href="http://itp.nyu.edu/physcomp/sensors/">Sensor Wiki</a></li>
+            </ul>
+
+            <ul>
+                <li><strong>p5.js:</strong></li>
+                <li><a href="https://p5js.org/">Processing Website</a></li>
+                <li><a href="http://natureofcode.com/">Nature of Code</a> by <a href="http://shiffman.net/">Dan Shiffman</a> - Book for learning to program visuals that mimic natural phenomena</li>
+            </ul>
+
+
+
+            <ul>
+                <li><strong>Soldering:</strong></li>
+                <li><a href="http://vimeo.com/102331731">Soldering Tips + How-to Video</a></li>
+                <li><a href="https://learn.sparkfun.com/tutorials/how-to-solder---through-hole-soldering">Sparkfun Soldering Tutorial</a></li>
+                <li><a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering">Adafruit's awesome tutorial on Soldering</a></li>
+                <li><a href="http://www.amazon.com/Solderable-BreadBoard-matches-tie-point-breadboards/dp/B0040Z3012/ref=sr_1_1?ie=UTF8&qid=1445172115&sr=8-1&keywords=solderable+bread+board">Solderable Breadboards</a></li>
+                <li><a href="http://www.amazon.com/Solderable-BreadBoard-matches-tie-point-breadboards/dp/B0040Z6OK6/ref=sr_1_8?ie=UTF8&qid=1445172115&sr=8-8&keywords=solderable+bread+board">Larger Solderable Breadboards</a></li>
+                <li><a href="https://cdn.sparkfun.com/assets/c/d/a/a/9/523b1189757b7fb36e8b456b.jpg">Soldering Do's and Don'ts reference</a></li>
+
+            </ul>
+
+            <ul>
+                <li><strong>Processing:</strong></li>
+                <li><a href="https://processing.org/">Processing Website</a></li>
+                <li><a href="https://processing.org/reference/">Processing Documentation and Code Reference</a></li>
+                <li><a href="https://processing.org/tutorials">Processing's Tutorials</a></li>
+                <li><a href="https://github.com/processing/processing/wiki/Common-Errors">Common Processing Errors</a></li>
+                <li><a href="http://learningprocessing.com/"> Learning Processing</a> by <a href="http://shiffman.net/">Dan Shiffman</a> - Great Beginner Processing book</li>
+            </ul>
+
+        </div>
+    </div>
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- BLOGS  BLOGS  BLOGS  BLOGS  BLOGS  BLOGS  BLOGS  BLOGS  BLOGS  BLOGS  BLOGS  BLOGS      -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+    <div class="container" id="students" style = "cursor:pointer" onclick="toggleDiv(this)">
+        <span id="schedule" class="anchor"></span>
+            <div class="page-header">
+                <h2 class="noselect">Student Work</h2>
+            </div>
+        <div class="container-fluid" id="students-detailed">
+            YOURBLOGSGOHERE
+        </div>
+    </div>
+
+
+<!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- COURSE INFO  COURSE INFO COURSE INFO COURSE INFO COURSE INFO COURSE INFO COURSE INFO    -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="container" id="course" style = "cursor:pointer" onclick="toggleDiv(this)">
+        <span id="course" class="anchor"></span>
+        <div class="page-header">
+            <h2 class="noselect">Course Description</h2>
+        </div>
+        
+        <div class="container-fluid" id="course-detailed">
+        
+            
+            <h3>Course Description</h3>
+            <p>This course offers in introduction into the fundamentals of physical computing and interactive art. The course will lay the foundations for understanding basic circuit design (both analog and digital), utilizing various inputs and outputs including sensors, screen based visualizers, synthesizers, and motors. Mostly technical, the class will provide a backdrop into the contemporary and historical landscape of electronic and interactive art. </p>
+    
+        
+            <div class="row">
+                <div class="col-xs-4 .col-sm-4 col-md-4">
+                    <h3>Learning Outcomes</h3>
+                    <ul>
+                        <li>Create engaging and critically relevant interactive projects</li>
+                        <li>Demonstrate the ability to bring a creative electronics project from concept to completion through researching tools, sourcing hardware, building circuits, and writing software</li>
+                        <li>Understand the basic principles and techniques necessary to create interactive systems using a microcontroller, sensors, actuators, and javascript </li
+                    <ul>
+                </div>
+
+                <div class="col-xs-4 .col-sm-4 col-md-4">
+                    <h3>General Course Structure</h3>
+                    <ul>
+                    <li><strong>Discussion/Crits:</strong> Presentation of weekly assignments, Q/A from the labs, discussion of reading assignments</li>
+                    <li><strong>Lecture:</strong> Technical concepts as well as thematic review of existing art/artists</li>
+                    <li><strong>Lab:</strong> In class workshop of technical material</li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-4 .col-sm-4 col-md-4">
+                    <h3>Links to Class Resources</h3>
+                    <ul>
+                    <li><a href="#readings"><strong>Readings: </strong></a> Weekly suggested reading</li>
+                    <li><a href="#parts"><strong>Parts: </strong></a>Suggested suppliers </li>
+                    <li><a href="#tutorials"><strong>Tutorials:</strong> </a>Videos, links for technical 'how tos'</li>
+                    <!-- <li><a href="physcompblog.html"><strong>Class Blog:</strong> </a>lecture material, announcements, etc.</li> -->
+                    <li><a href="#studentBlog"><strong>Student Blogroll:</strong> </a>Links to student work</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /////// -->
+            <div class="row">
+                <div>
+                    <h3>Course Expections + Grading Rhubric</h3>
+                    <ul>
+                        <li><strong>Lab Reports (Blog):</strong> Labs are weekly skillbuilding assignments. They may include, readings, circuit building, and/or programming. Lab reports are simultaneously documentation as well as an assessment of your understanding and what questions you may have. Requirements for each lab report will be posted with each lab assignment. Lab reports are submitted in the form of a blog post. Students can either submit a link of a list of tagged posts or can create a blog devoted entirely to the class. It is up to each student on what service they prefer (github, tumblr, wordpress, squarespace, cargo, etc.).<br>
+
+                        All class projects as well as labs need to be documented with videos, photos, and if applicable, circuit diagrams. Documentation is important not only for archiving your work, but serves as an important resource for the open source community.
+
+                        <br><em>Weight: 40%</em></li><br>
+                        
+                        <li><strong>Midterm Project: </strong>The midterm is an opportunity to create a technically robust and conceptually sound project utilizing the skills they've learned in the first half of the semester. Students will present in class to outside guests.<br><em>Weight: 20%</em></li><br>
+                        
+                        <li><strong>Final Project: </strong>The final is an opportunity to create a more advanced interactive project that fits within the students body of work or area of inquiry. Students will submit proposals containing a brief project statment, diagrams, timeline, and any necessary supporting material. Students will present in class to outside guests.<br><em>Weight: 30%</em></li><br>
+
+                        <li><strong>Participation + Preparation: </strong>This is based on class attendance, arriving on time, being prepared and having the necessaryt tools, and participation in class dicussion.<br><em>Weight: 10%</em></li>
+                      
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+<!-- Cool projects 
+http://www.dezeen.com/2014/09/17/interactive-dancing-traffic-lights-installation-smart-car-lisbon/
+-->
+
+
+        <footer class="footer">
+            <div class="container">Art B2011 | Fall 2016, DIAP at CCNY | David Rios | Email: riosriosriosrios (_at_) gmail (_dot_) com | Office Hours: TH, F by appointment
+            </div>
+        </footer>
+
+         <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+       
+        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <!-- <script src="js/app.js"></script> -->
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+       
+    </body>
+</html>
