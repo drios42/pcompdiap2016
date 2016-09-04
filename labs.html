@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Physical Computing Syllabus </title>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom styles for this template -->
+    <link href="mycss/starter-template.css" rel="stylesheet">
+    
+    <!-- <link href="mycss/grid.css" rel="stylesheet"> -->
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/p5.min.js" type="text/javascript"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/addons/p5.dom.min.js" type="text/javascript"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/addons/p5.sound.min.js" type="text/javascript"></script>
+
+<!-- 
+ 
+    <script src = "libraries/p5.js" type="text/javascript"></script>
+    <script src = "libraries/p5.dom.js" type="text/javascript"></script>
+    <script src = "libraries/p5.sound.js" type="text/javascript"></script>
+
+-->
+
+    <script src="js/sketch.js" type="text/javascript"></script>
+    <link href="mycss/mycss.css" rel="stylesheet">
+    <style> body {padding: 50px; margin: 0;} canvas {vertical-align: top;} </style>
+
+    </head>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////-->
+<!--HEADER AND NAVIGATION-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <body>
+        <nav class="nav navbar navbar-default navbar-fixed-top" id="myTabs">
+            <div class="navbar-brand">
+                <strong>Medium Workshop: Physical Computing </strong>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a href="index.html"> Syllabus</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="materials.html">Resources</a></li>
+                <li><a href="students.html">Student Blogs</a></li>
+                <li><a href="course.html">Overview</a></li>
+                
+                
+            </ul>
+
+        </nav>
+            
+      
+ <!-- CONTENT -->       
+
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- LABS & ASSIGNMENTS  LABS & ASSIGNMENTS  LABS & ASSIGNMENTS  LABS & ASSIGNMENTS  LABS & ASSIGNMENTS -->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <div class="container" id="labs" style = "cursor:pointer" onclick="toggleDiv(this)">
+        <span id="schedule" class="anchor"></span>
+        <div class="page-header">
+            <h2 class="noselect">Labs</h2>
+        </div>
+        <div class="container-fluid" id="labs-detailed">
+            <div class="container" id="lab1">
+                <h3>Lab 1: First Circuit, Switch, and Hello World </h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Create your own circuit and a switch that is activated and deactivated by something other than your hands</li>  
+
+                        <li><a href="https://docs.google.com/spreadsheets/d/12mrECZfoBHJ3xtFwX8FP-wUp6A-MVsR1_DIhRrMfv00/edit?usp=sharing" target="BLANK">Set up a blog and send me the link here</a></li>
+                        <li><strong>BLOG POST :  </strong>Use photo video to document your circuit. Include a write up of your process and address the following issues: What does the switch do? Where could it reside? Who will use it? How did you make it?</li>
+                        <li><a href="http://arduino.cc/en/Guide/HomePage"> Install the Arduinio IDE: </a>Run the <a href="http://arduino.cc/en/tutorial/blink">"blink"</a> example to make sure its installed correctly. (use the built in LED)</li>
+                         <li>Bring Your Circuit to Class (if possible)</li>  
+
+                    </ul>
+
+                <li><strong>Resources:</strong></li>
+                    <ul>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Components"> ITP Lab: </a>Components</li>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Breadboard"> ITP Lab: </a>Setting up a breadboard</li>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Electronics"> ITP Lab: </a>Using a multimeter (use Arduino to power the board, ignore the Voltage regulator)</li>
+                        <li><a href="https://itp.nyu.edu/physcomp/Labs/Soldering"> ITP Lab: </a>Soldering</li>
+                        <li><a href="http://drios42.github.io/readings/physcompIgoeOsullivan.pdf">Physical Computing: Introduction, Ch1, Ch2, Ch3</a></li>
+                    </ul>
+
+                <li><strong>Optional Readings:</strong></li>
+                    <ul>
+                        <li><a href="http://playground.arduino.cc/uploads/Main/arduino_comic_v0004.pdf">Jody Culkin's sweet Arduino Comic</a></li>
+                        <li><a href="http://mars1980.github.io/resources/theartofinteractivedesign.pdf">Chris Crawford: The Art of Interactive Design Ch 1 & 2</a></li>
+                    </ul>
+
+            </div>
+
+            <div class="container" id="lab2">
+                <h3>Lab 2: Input/Output </h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Create another circuit or modify your existing circuit (still with no hands), this time using the arduino to read your input and to affect your output</li>    
+                        <li><a href="https://docs.google.com/spreadsheets/d/12mrECZfoBHJ3xtFwX8FP-wUp6A-MVsR1_DIhRrMfv00/edit?usp=sharing" target="BLANK">If you still do not have a blog, fill this up ASAP</a></li>
+                        <li><strong>BLOG POST:  </strong>Use photo video to document your circuit. Include a write up of your process and address the following issues: What did you change between your previous assignment and this one? What does this circuit do? Where could it reside? Who will use it? How did you make it?<br><p>Reflect: <br>What is new to you and what do you already know? Feel free to include any pictures of successes, failures, or questions.</li>
+                    </ul>
+
+                <li><strong>Resources:</strong></li>
+                    <ul>
+                        <li><a href="https://itp.nyu.edu/physcomp/lessons/microcontrollers/digital-input-output/">ITP Lab: Digital Input Output</a></li>
+                        <li><a href="https://itp.nyu.edu/physcomp/lessons/microcontrollers/microcontrollers-the-basics/"> ITP Lab: </a>Microcontrollers</li>
+                        <li>VIDEO: <a href="https://vimeo.com/86548673">Digital Input</a></li>
+                        <li>VIDEO: <a href="https://vimeo.com/86534049">Digital Output</a></li>
+                    </ul>
+
+                <li><strong>Optional Readings:</strong></li>
+                    <ul>
+                        <li><a href="http://www.jnd.org/dn.mss/emotion_design_at.html">Essay: Emotion & Design</a></li>
+                        <li><a href="http://mars1980.github.io/resources/arduinoCookbook2ndEd.pdf">Arduino Cookbook Ch2, Ch3, Ch 5.1 - 5.5</a></li>
+                        <li><a href="http://www.tigoe.net/blog/category/physicalcomputing/176/">Physical Computing's Greatest Hits & Misses</a></li>
+                        <li><a href="http://www.moma.org/interactives/exhibitions/2011/talktome/essay/">Essay: Talk to Me</a></li>
+                        <li><a href="http://worrydream.com/ABriefRantOnTheFutureOfInteractionDesign/" target="blank">Bret Victor: Rant on the Future of Interaction Design</a></li>
+                    </ul>
+
+            </div>
+
+             <div class="container" id="lab3">
+                <h3>Lab 3: On Off and In Between </h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Create circuit that makes use of Analog inputs and outputs.  You may now use your hands (if you must...) to trigger interactions. If you choose to use hands then you can not use a potentiometer</li>    
+                        <li><strong>BLOG POST :  </strong>Document your work</li>
+                        <li><strong>Writing Assignment: </strong>Identify a piece of technology and investigate it.  Is it "low-tech" or "High Tech"</li>
+                    </ul>
+                
+
+                <li><strong>References:</strong></li>
+                    <ul>
+                        
+                    </ul>
+
+            </div>
+
+             <div class="container" id="lab4">
+                <h3>Lab 4: Motion</h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Expand on what we did in class. Make something move.  It must react to an input. All body parts and interactions are now in play</li>    
+
+                        <li><strong>BLOG POST :  </strong>Document your work</li>
+
+                        <li><strong>Watch: </strong>p5 drawing videos</li>
+                        
+                        <li>Download p5 and try to draw something. Make art. Make a selfie. Explore the documentation Come to class with questions</li>
+
+                    </ul>
+                   
+                    <ul>
+                        <li><strong>Readings:</strong></li>
+                    <ul>
+                        <li><a href="https://itp.nyu.edu/physcomp/wp-content/uploads/PhysicalComputingReviewQuiz2.pdf">Pcomp Self Quiz #2</a></li>
+                    </ul>
+                    <li><strong>References:</strong></li>
+                    <ul>
+                        <li>ITP tutorials:  <a href="https://itp.nyu.edu/physcomp/Labs/DCMotorControl">DC Motor w/  H-bridge, </a>
+                        <a href="https://itp.nyu.edu/physcomp/Labs/StepperMotorControl">Stepper Motor w/ H-Bridge, </a>
+                        <a href="https://itp.nyu.edu/physcomp/Labs/Servo">Servomotor control, </a>
+                        <a href="https://itp.nyu.edu/physcomp/Tutorials/HighCurrentLoads">High Current loads w/ transistor</a>
+                        </li>
+                        <li><strong>experiment:  </strong>Make something move! An intervelometer for a camera, the arms of a stuffed toy, you name it.</li>
+                    </ul>                  
+                 </ul>
+            </div>
+
+            <div class="container" id="lab5">
+                <h3>Lab 5: Animation</h3>
+                
+                <li><strong>Doings:</strong></li>
+                    <ul>
+                        <li>Use p5 to make a game or a simulation a narrative with </li>    
+                        <li><strong>BLOG POST :  </strong>upload sketch and code to your blog.</li>
+                    </ul>
+
+                <li><strong>Lab Report:</strong></li>
+                    <ul>
+                        <li>Blog your assignment.</li>
+                    </ul>
+                
+
+                <li><strong>References:</strong></li>
+                    <ul>
+                    </ul>
+
+            </div>
+
+             <div class="container" id="lab6">
+                <h3>Lab 6: </h3>
+                
+                <li><strong>Doings: Functionality</strong></li>
+                    <ul>
+                        <li>Build on your animation (or start a new one) but make sure your draw loop only consists of calls to functions</li>    
+                        <li><strong>BLOG POST :  </strong>Uupload sketch and code to your blog or include a link</li>
+                    </ul>
+
+                <li><strong>Lab Report:</strong></li>
+                    <ul>
+                        <li>Blog your assignment.</li>
+                    </ul>
+                
+
+                <li><strong>References:</strong></li>
+                    <ul>
+                       
+                    </ul>
+
+            </div>
+
+
+
+
+
+
+    
+        </div>
+    </div>
+
+
+
+        <footer class="footer">
+            <div class="container">Art B2011 | Fall 2016, DIAP at CCNY | David Rios | Email: riosriosriosrios (_at_) gmail (_dot_) com | Office Hours: TH, F by appointment
+            </div>
+        </footer>
+
+         <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+       
+        <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <!-- <script src="js/app.js"></script> -->
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+       
+    </body>
+</html>
