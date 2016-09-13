@@ -78,7 +78,7 @@
         </div>
         <div class="container-fluid" id="notes-detailed">
             <div class="container" id="class1">
-                <h3>Class 1: Electricty and First Circuit</h3>
+                <div class="page-header"><h3>Class 1: Electricty and First Circuit</h3></div>
                 
                 <ul><strong>Physical Computing and Electricty:</strong></ul>
                     <ul>
@@ -137,97 +137,159 @@
 
              <div class="container" id="class3">
                 <h3>Class 3: On Off and In Between </h3>
+                <li><strong>Arduino Code:</strong></li>
+                    <ul>
+                        <li>Our code is like a blueprint, or a list of commands that the arduino will execute.  For the most part we can imagine that the arduino is reading our code line by line from top to bottom.  The Arduino will excute the code exactly as it is written, in order, line by line.  It is our job as programmers to remember that while the computer is fast and powerful, it is also very simplistic in how it reads and executes our code.</li> 
+
+                        <li>Our code uses variables to store information and functions to do stuff with that information.  It also has a variety of logical operators and comparitors that allow us to compare things and program different behaviors for different situations.</li>   
+                    </ul>
+
+
+                <li><strong>Syntax:</strong></li>
+                    <ul>
+                        <li>Arduino code is text based, and requires us to remember certain keywords and punctuation marks and write them in the correct order.  If we forget certain words or punctuation, or if we place them in the wrong order, our code will not compile and we will get an error</li> 
+
+                        <li><code>{ }</code> Curly brackets are like containers for our functions. If we want excute a function we have to put our commands in between the brackets of that function<br>
+                        <ul><code>
+                            void setup(){<br> 
+                            int led = 7;<br>
+                            pinMode(led, OUTPUT);<br>
+                        }
+                        </code></ul></li><br>
+
+                        <li><code>;</code> Semicolons are how we end each line of a declaration or function call.  Always check for missing semicolons</li>  
+
+                        <li><code>()</code> Parentheses on their own are used to separate mathematical order of operations<br><code> <ul>x = (x +50)*3; </code></ul></li><br>
+
+                        <li><code><em>name</em>(<em>parameters</em>)</code> Parentheses after a name indicate we are executing a function.  Some functions also require parameters inside the parentheses in order for the function to execute properly<br>
+                            <ul>
+                                <code>
+                                    pinMode(7, OUTPUT);<br>
+                                </code>
+                            </ul>
+                        </li> 
+
+                        <li><code>//</code> Two slashes will comment out the text that follows it. Anything written after <code>// will not be interpreted by the arduino compiler</code>  This is useful for making notes to yourself and to other programmers who may read your code</li>  
+
+                    <!--     <li><code>char</code> Stands for <em>character</em>. This variable type is capable of storing alpha-numeric characters.  But remember! In arduino the <code>char</code> type stores your letters and numerals as ascii encoded values.  For example the character<code>'A'</code> will have a coded value of <code>65</code>. the character <code>3</code> will be encoded</li> 
+
+                        <li><code>String</code> Is an object that lets you store words or sentences.  Strings are stored as arrays of characters.</li>  -->
+
+                    </ul>
+
+                    <li><strong>Programming logic, and variables in Arduino:</strong></li>
+                    <ul>
+                        <li><strong><code>type nameOfVariable</code></strong> All variables have a "type" and a "name." The <strong>type</strong> determines what kind of information it can store.  The <strong>name</strong> is the label we assign to that information so that the arduino knows where to find that information. <br> 
+                        <li>Variables have to be declared before we can use them.
+
+                            <li>We declare variables like this:<code>
+                                <ul> <br>int x;<br></ul></code><li>
+
+                            <li>We can also assign a variable a value when we declare it:<code>
+                                  <ul> <br>int x = 0;<br></ul></code></li>
+
+                            <li>For now, we can declare our variable above our setup and loop functions.  This will ensure that they are useable in all parts of our sketch<br>
+                                <code>
+                                   int x = 25;<br>
+                                   void setup(){<br>
+                                    }<br>
+                                       void loop(){<br>
+                                    }<br>
+                                    
+                                    </code><br>
+                            </li>
+                        </li> 
+
+                         
+                            <li>Similar to algebra class. If we say <em> x = 25</em></li> 
+                            <li>Then we ask what is <em> x + 1</em></li>
+                            <li>We know the answer to be 26</li><br>
+                            <li>In the arduino we can update a variable like so:</li>  <br>
+
                 
-                <li><strong>Doings:</strong></li>
-                    <ul>
-                        <li>Create circuit that makes use of Analog inputs and outputs.  You may now use your hands (if you must...) to trigger interactions. If you choose to use hands then you can not use a potentiometer</li>    
-                        <li><strong>BLOG POST :  </strong>Document your work</li>
-                        <li><strong>Writing Assignment: </strong>Identify a piece of technology and investigate it.  Is it "low-tech" or "High Tech"</li>
-                    </ul>
-                
+                             <ul>
+                                <code>
+                                 int x = 25;<br>
+                                   void setup(){<br>
+                                    x = x + 2;<br>
+                                    }
+                                    </code><br>
+                            </ul>
+                                When setup() finishes running the variable <code>x</code> will be storing the number 27 
+                            
+                            <ul>
+                              <br><code>
+                              int x = 25;<br>
+                              void loop(){<br>
+                                x = x + 2;<br>
+                                    }
+                                    </code><br>
+                            </ul>
+                                    If we update inside the loop, x will start out at 25 on startup and it will increase by 2 each time the loop executes
+                          
 
-                <li><strong>References:</strong></li>
-                    <ul>
-                        
-                    </ul>
+                            <ul>
+                                <br><code>
+                                int larry = 25;<br>
+                                void setup(){<br>
+                                larry = larry + 2;<br>
+                                }
+                                    </code><br>
+                            </ul>
+                                Now the variable <code>larry</code> is storing the number 27
+                           <br>
 
-            </div>
-
-            <!--  <div class="container" id="lab4">
-                <h3>Lab 4: Motion</h3>
-                
-                <li><strong>Doings:</strong></li>
-                    <ul>
-                        <li>Expand on what we did in class. Make something move.  It must react to an input. All body parts and interactions are now in play</li>    
-
-                        <li><strong>BLOG POST :  </strong>Document your work</li>
-
-                        <li><strong>Watch: </strong>p5 drawing videos</li>
-                        
-                        <li>Download p5 and try to draw something. Make art. Make a selfie. Explore the documentation Come to class with questions</li>
-
-                    </ul>
-                   
-                    <ul>
-                        <li><strong>Readings:</strong></li>
-                    <ul>
-                        <li><a href="https://itp.nyu.edu/physcomp/wp-content/uploads/PhysicalComputingReviewQuiz2.pdf">Pcomp Self Quiz #2</a></li>
-                    </ul>
-                    <li><strong>References:</strong></li>
-                    <ul>
-                        <li>ITP tutorials:  <a href="https://itp.nyu.edu/physcomp/Labs/DCMotorControl">DC Motor w/  H-bridge, </a>
-                        <a href="https://itp.nyu.edu/physcomp/Labs/StepperMotorControl">Stepper Motor w/ H-Bridge, </a>
-                        <a href="https://itp.nyu.edu/physcomp/Labs/Servo">Servomotor control, </a>
-                        <a href="https://itp.nyu.edu/physcomp/Tutorials/HighCurrentLoads">High Current loads w/ transistor</a>
                         </li>
-                        <li><strong>experiment:  </strong>Make something move! An intervelometer for a camera, the arms of a stuffed toy, you name it.</li>
-                    </ul>                  
-                 </ul>
+                        
+                        <li><code>int</code> Stands for <em>integer</em>. This type is capable of storing whole numbers. Numbers can be both negative and positive. Has limited range of -32,768 - 32,767</li>  
+                        <li><code>float</code> Stands for <em>floating point</em>. This variable type is capable of storing decimal numbers both negative and positive</li>  
+
+                        <li><code>bool</code> or <code>boolean</code> This variable type is capable of storing either <code>true</code> and <code>false</code> statements,  true will evaluate to <code>1</code>, false will evaluate to <code>0</code></li>  
+                        
+                        <li><code>long</code> Same as <code>int</code> but capable of storing larger numbers</li>
+                    <!--     <li><code>char</code> Stands for <em>character</em>. This variable type is capable of storing alpha-numeric characters.  But remember! In arduino the <code>char</code> type stores your letters and numerals as ascii encoded values.  For example the character<code>'A'</code> will have a coded value of <code>65</code>. the character <code>3</code> will be encoded</li> 
+
+                        <li><code>String</code> Is an object that lets you store words or sentences.  Strings are stored as arrays of characters.</li>  -->
+
+                    </ul>
+
+                <li><strong>Functions:</strong></li>
+                    <ul>
+                        <li><code>void setup(){}</code> Only runs once upon arduino bootup. Certain functions only need to run once in your code.  These functions go in setup()</li>  
+
+                        <li><code>void loop(){}</code> Executes over and over and over and over forever (or until you reboot or unplug your arduino). The loop is the master of your program and will control nearly all interactivity in your code</li>  
+
+                    </ul>
+                    
+                
+
+                <li><strong>Comparitors and Operators:</strong></li>
+                    <ul>
+                        <li><code> if(){}</code> If statements, check to see if a condition (that you define) is met.  If the condition is met, the code inside the if statement will execute.  If the condition is not met, the code inside the if statement will get skipped, and will not execute.  If statements let you make dynamic code.</li>  
+
+                        <li><code> = </code> Single equals, assigns the value on the right to the variable on the left  </li> 
+
+                        <li><code> == </code> Double equals, compares the two values to eachother. Returns true if they are equal false if they are not </li> 
+
+                        <li><code> > </code> Greater than, compares the two values to eachother. Returns true if the right is greater than the left </li> 
+
+                        <li><code> >= </code> Greater than or equal, compares the two values to eachother. Returns true if the right side value is greater than or equal to the left side value</li> 
+
+                        <li><code> < </code> Less than, compares the two values to eachother. Returns true if the right side value is less than the left </li> 
+
+                         <li><code> <= </code> Less than or equal, compares the two values to eachother. Returns true if the right side value is less than or equal to the left side value </li> 
+
+                        <li><code> != </code> Not equal, compares the two values to eachother. Returns true if they are NOT equal false if they are equal</li> 
+
+                        <li><code> && </code> AND. Compare multiple conditions in one line.  Both conditions must be met in order to return true</li> 
+
+                        <li><code> || </code> OR. Compare multiple conditions in one line. Returns true if either condition is met</li> 
+
+                    </ul>
+
             </div>
 
-            <div class="container" id="lab5">
-                <h3>Lab 5: Animation</h3>
-                
-                <li><strong>Doings:</strong></li>
-                    <ul>
-                        <li>Use p5 to make a game or a simulation a narrative with </li>    
-                        <li><strong>BLOG POST :  </strong>upload sketch and code to your blog.</li>
-                    </ul>
-
-                <li><strong>Lab Report:</strong></li>
-                    <ul>
-                        <li>Blog your assignment.</li>
-                    </ul>
-                
-
-                <li><strong>References:</strong></li>
-                    <ul>
-                    </ul>
-
-            </div>
-
-             <div class="container" id="lab6">
-                <h3>Lab 6: </h3>
-                
-                <li><strong>Doings: Functionality</strong></li>
-                    <ul>
-                        <li>Build on your animation (or start a new one) but make sure your draw loop only consists of calls to functions</li>    
-                        <li><strong>BLOG POST :  </strong>Uupload sketch and code to your blog or include a link</li>
-                    </ul>
-
-                <li><strong>Lab Report:</strong></li>
-                    <ul>
-                        <li>Blog your assignment.</li>
-                    </ul>
-                
-
-                <li><strong>References:</strong></li>
-                    <ul>
-                       
-                    </ul>
-
-            </div>    
-        </div> -->
+            <!--  q -->
     </div>
 
 
