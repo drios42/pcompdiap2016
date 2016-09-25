@@ -1,0 +1,40 @@
+DIAP Class 04 Boolean Logic
+
+Anatomy of a program:
+
+its like a blue print or a set of instructions. written in a very specific way that allows the computer to compile and run or execute a series of commands over and over and over and over
+
+Reads from left to right top to bottom
+PUNCTUATION MATTERS!
+
+		setup
+		loop
+		int
+		float
+		boolean
+		code
+		
+		input/output
+		
+		digital read and write
+		
+		delay()
+
+		What if we want to detect descrete button presses, like our remotes.
+
+		button press descrete press detection  (switch and counter)
+		
+		Timing and counting
+
+		counter
+
+		millis()
+
+
+		ANALONG
+		PWM
+
+		map()
+		tone
+
+HOMEWORK: AND SHOW SENSORS
