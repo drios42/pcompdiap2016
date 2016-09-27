@@ -289,8 +289,144 @@
                     </ul>
 
             </div>
+            <div class="container" id="class4">
+                <h3>Class 4: Timers and Booleans </h3>
+                 <ul>
+                   <a href="https://github.com/drios42/pcompdiap2016/tree/gh-pages/code/Class%2004%20Variables%20Timers%20Booleans">Reference Code Here</a></ul>
+                   <br>
+                <li><strong>Timing without Delays:</strong></li><br>
+               
+                    <ul>
+                        The arduino runs constantly at a high speed.  Which is extremely usefull for reading sensors and executing our code.  However sometimes we want time based interactivity.  Sometimes we want things to happen at intervals, or with pauses, or with delays.<br><br>
+                        Up until now we've used the <code>delay()</code> function to pause our code between our desired actions.  However the <code>delay()</code> function is a <strong>blocking</strong> function.  This means that it stops all of our code from running until <code>delay()</code> has finished executing.  
 
-            <!--  q -->
+                        This means that if I write a line of code that says: <br><br> <code>delay(2000);</code><br><br> My sketch will now stop all actions until the 2 seconds of delay are done.<br><br>
+
+                        If we want to have time based functionality without stopping the rest of our program from running we need to set up a <a href="https://github.com/drios42/pcompdiap2016/blob/gh-pages/code/Class%2004%20Variables%20Timers%20Booleans/timeWithOutDelay/timeWithOutDelay.ino">timer.</a><br><br>
+
+                        Time in the arduino is like a stopwatch, it starts at 0 on startup and increases continuously by the millisecond (0.001 seconds!).  We can use the <code>millis()</code> function to read out how much time (in milliseconds) has passed since our startup.<br><br>
+
+                        We can set up a system that triggers events by updating a "timestamp" variable at a certain interval.<br><br>
+
+                        First, make variables to store the current time (aka <code>millis()</code>) , and the last checked time (lastTime). Also make a variable for the interval at which we want to trigger actions, mine will be every 500 milliseconds.  Then at the end of our <code>setup()</code> function set the "timestamp" equal to millis.  Setting <code>lastTime = millis();</code> ensures that our initial "timestamp" (our variable <code>lastTime</code>) is set right when we start running our sketch<br><br>
+                        <pre>
+                            int interval = 500; // set interval for triggering actions (maybe blink an LED)
+                            long currentTime; // variable to store our millis(), use long instead of int 
+                            long lastTime; // timestamp for the last time we triggered, use long instead of int
+                    
+                            void setup() { 
+                              Serial.begin(9600); // start serial so we can debug 
+                              lastTime = millis(); // set our "timestamp" when we turn on our program.
+                            }
+                        </pre>
+                        <br>
+                        Now in the loop we want to update our current time constantly so we can keep track of time.  Then use an "if" statement to see how much time has passed. Subtracting our "timestamp" variable <code>lastTime</code> from <code>millis()</code> will tell us how much time has passed between starting the sketch and that moment in time.<br><br>
+                        Now we compare.  Is the passage of time greater than the amount of time we want to wait in order to trigger something (aka <code>interval</code>)?  if so, do something like print out "Hey 500 millis has passed".  And then <strong>most importantly</strong> reset our timestamp at that moment so that when the loop restarts our comparison of <code>currentTime - lastTime</code> will equal 0, and force the sketch to wait 500 milliseconds (or whatever you make your interval amount) until the next time it triggers an action
+                        <br><br>
+                        <pre>
+                        void loop() {
+
+                          currentTime = millis(); // continuously update the 
+
+                          if (currentTime - lastTime > interval) { // check the passage of time
+                            Serial.println("Hey 500 millis has passed") // trigger a serial println
+                            lastTime = millis(); // update the timestamp so we can continue keeping track
+                          }
+                        }
+                        </pre>
+                    </ul>
+                    <li><strong>Using Booleans:</strong></li>
+                    <ul>
+                        We can add more functionality to the code above.  Lets say we want to light up an led without using delays.  We can make a boolean that will act as a trigger for our led.  Booleans can only be either true or false, so our led will only be able to be on or off
+                        <pre>
+                            boolean = ledState;
+                        </pre>
+                        Set it false just to start off
+                         <pre>
+                            void setup() { 
+                              Serial.begin(9600); // start serial so we can debug 
+                              lastTime = millis(); // set our "timestamp" when we turn on our program.
+                              ledState = false; // start with our led trigger off
+                            }
+                        </pre>
+
+                        Now in the loop change the state of the led trigger each time we reach our interval.  I will use a shorthand that looks like this <code>ledState = !ledState</code><br><br>
+                        <code>!</code> is the NOT operator.  When used to set the state of a boolean it changes the booleans state to be not what it previously was. So if it was just <code>false</code> that means it is not <code>true</code>. so it will update and become true (and vice-versa) when this line of code is called <code>ledState = !ledState</code>
+                        <pre>
+                         void loop() {
+
+                          currentTime = millis(); // continuously update the 
+
+                          if (currentTime - lastTime > interval) { // check the passage of time
+                            Serial.println("Hey 500 millis has passed") // trigger a serial println
+                            
+                            ledState = !ledState  // change ledState to the opposite of what it was previously
+
+                            lastTime = millis(); // update the timestamp so we can continue keeping track
+
+                          }
+                        }
+                        </pre>
+                        However, this only changes the state of the boolean.  Now we need to use that boolean to make some thing happen.  Lets say if the boolean is true, turn on the led, if its false turn off the led.
+                        <pre>
+
+                        boolean = ledState; // variable for the state of our led
+                        int led = 7; // connect the led to pin 7
+                        int interval = 500; // set interval for triggering actions (maybe blink an LED)
+                        long currentTime; // variable to store our millis(), use long instead of int 
+                        long lastTime; // timestamp for the last time we triggered, use long instead of int
+                    
+                        void setup() { 
+                          Serial.begin(9600); // start serial so we can debug 
+                          pinMode(led, OUTPUT);
+                          lastTime = millis(); // set our "timestamp" when we turn on our program.
+                          ledState = false; // start with our led trigger off
+                        }
+                            
+                        void loop() {
+
+                          currentTime = millis(); // continuously update the 
+
+                          if (currentTime - lastTime > interval) { // check the passage of time
+                            Serial.println("Hey 500 millis has passed") // trigger a serial println
+                            
+                            ledState = !ledState            // change ledState to the opposite of what it was previously
+
+                            lastTime = millis();           // update the timestamp so we can continue keeping track
+
+                          }
+
+                          if (ledState == true){         // if the ledState is true....
+
+                                digitalWrite(led, HIGH); // turn on the led
+
+                            }else{                       // if the ledState is false....
+                                
+                                digitalWrite(led, LOW);  //turn off the led
+                            }
+                        }
+                        </pre>
+
+                        Now we have a system where our time is independent of <code>delay()</code> so our code will not be blocked. This also means we can update our blink rates just by changing our interval variable instead of writing many lines of <code>delay()</code> over and over. We are also now able to turn our led on and off by setting the <code>ledState</code> to be either <code>true</code> or <code>false</code>.  Meaning we can have it on a timer but we can also turn it on or off based on any other conditions with out having to write extra <code>digitalWrite()</code> or <code>delay()</code>
+
+                    </ul>
+            </div>
+             <div class="container" id="class5">
+                <h3>Class 5: Motors / Git / Github / Drawing in P5 </h3>
+                <li><strong>Git:</strong></li>
+                <ul><a href="https://git-scm.com/download/mac">Download Git Here</a></ul>
+
+                <li><strong>Github:</strong></li>
+                <ul><a href="https://github.com/">Create a Github Account</a></ul>
+                
+                <li><strong>P5:</strong></li>
+                    <ul>
+                        <li>Our code is like a blueprint, or a list of commands that the arduino will execute.  For the most part we can imagine that the arduino is reading our code line by line from top to bottom.  The Arduino will excute the code exactly as it is written, in order, line by line.  It is our job as programmers to remember that while the computer is fast and powerful, it is also very simplistic in how it reads and executes our code.</li> 
+
+                        <li>Our code uses variables to store information and functions to do stuff with that information.  It also has a variety of logical operators and comparitors that allow us to compare things and program different behaviors for different situations.</li>   
+                    </ul>
+            </div>
+
     </div>
 
 
